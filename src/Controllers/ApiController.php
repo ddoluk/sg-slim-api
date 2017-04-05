@@ -21,14 +21,12 @@ class ApiController extends Controller
     public function createAction(Request $request, Response $response)
     {
         $data = $request->getParsedBody();
-
         Todo::create($data);
     }
 
     public function editAction(Request $request, Response $response, $id)
     {
         $edit = Todo::find($id);
-
         $response = $response->withHeader('Content-type', 'application/json');
         $response = $response->withJson($edit);
 

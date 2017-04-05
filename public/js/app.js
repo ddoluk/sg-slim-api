@@ -7,7 +7,7 @@ var app = new Vue({
     },
     methods: {
         listTasks: function () {
-            this.$http.get('/api/all').then(response => {this.todos = response.body; });
+            this.$http.get('/api/all').then(response => {this.todos = response.body;});
         }
     }
 });
