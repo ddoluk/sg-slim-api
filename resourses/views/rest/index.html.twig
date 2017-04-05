@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="col-md-10 col-md-offset-1">
+        <form action="" method="post">
+            <div class="input-group">
+                <input type="text" name="task" class="form-control" placeholder="Add Your Task">
+                <span class="input-group-btn"> <input class="btn btn-primary" type="submit">Go!</input> </span>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <ul>
+                <li v-for="list in todos">
+                    <h1>${ list.task }</h1>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+{% endblock %}
